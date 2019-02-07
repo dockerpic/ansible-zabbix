@@ -16,7 +16,7 @@
   shell: nproc
   register: number_of_core
 - name: compile cmake
-  shell: cd ~/cmake-3.13.4 && make -j{{ number_of_core }}
+  shell: cd ~/cmake-3.13.4 && make 
 - name: install cmake
   become: yes
   shell: ~/cmake-3.13.4/make install
