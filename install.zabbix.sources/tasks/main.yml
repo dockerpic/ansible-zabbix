@@ -1,0 +1,10 @@
+---
+# tasks file for install.zabbix
+- name: download Zabbix sources
+  get_url:
+    url: "https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Development/4.2.0alpha3/zabbix-4.2.0alpha3.tar.gz"
+    dest: ~/product
+- name: unarchive Zabbix sources
+  unarchive:
+    src: ~/product/zabbix-4.2.0alpha3.tar.gz
+    dest: ~/
