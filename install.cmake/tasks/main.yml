@@ -9,6 +9,6 @@
     src: ~/product/cmake-3.13.4.tar.gz
     dest: ~/
 - name: run configure
-  shell: configure --prefix=/opt/cmake
+  shell: ~/cmake-3.13.4/configure --prefix=/opt/cmake
   args:
     chdir: ~/cmake-3.13.4
