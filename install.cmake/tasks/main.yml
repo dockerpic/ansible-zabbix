@@ -8,6 +8,8 @@
   unarchive:
     src: ~/product/cmake-3.13.4.tar.gz
     dest: ~/
+- name: set the work directory
+  command: cd ~/cmake-3.13.4
 - name: run configure
   command: configure --prefix=/opt/cmake
   args:
