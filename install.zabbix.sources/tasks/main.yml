@@ -1,5 +1,9 @@
 ---
 # tasks file for install.zabbix
+- name: create product directory
+  file: 
+    path: ~/product
+    state: directory
 - name: download Zabbix sources
   get_url:
     url: "https://sourceforge.net/projects/zabbix/files/ZABBIX%20Latest%20Development/4.2.0alpha3/zabbix-4.2.0alpha3.tar.gz"

@@ -1,6 +1,6 @@
 ---
 # tasks file for install.gcc
-- name: Install Install build tools
+- name: Install build gcc tools
   yum:
     name: "@Development tools"
     state: present
