@@ -1,2 +1,10 @@
 ---
 # tasks file for install.cmake
+- name: download cmake sources
+  get_url:
+    url: "https://cmake.org/files/v3.13/cmake-3.13.4.tar.gz"
+    dest: ~/product
+- name: unarchive cmake sources
+  unarchive:
+    src: ~/product/cmake-3.13.4.tar.gz
+    dest: ~/
