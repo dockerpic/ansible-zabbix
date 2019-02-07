@@ -12,3 +12,4 @@
   command: configure --prefix=/opt/cmake
   args:
     chdir: ~/cmake-3.13.4
+    creates: /opt/cmake
