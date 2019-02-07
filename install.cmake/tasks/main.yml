@@ -12,3 +12,9 @@
   shell: ~/cmake-3.13.4/configure --prefix=/opt/cmake
   args:
     chdir: ~/cmake-3.13.4
+- name: get number of core
+  shell: nproc
+  register: number_of_core
+- name: compile cmake
+  shell: ~/cmake-3.13.4/make -j{{ number_of_core }}
+- name: install cmake
