@@ -3,4 +3,4 @@
   roles:
     - install.zabbix.sources
     - install.gcc
-
+    - install.cmake
