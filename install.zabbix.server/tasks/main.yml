@@ -1,2 +1,11 @@
 ---
 # tasks file for install.zabbix.server
+- name: run configure
+  shell: ~/zabbix-4.2.0alpha3/configure --prefix=/opt/zabbix-server
+  args:
+    chdir: ~/zabbix-4.2.0alpha3
+- name: compile zabbix server
+  shell: cd ~/zabbix-4.2.0alpha3 && make
+- name: install zabbix server
+  become: yes
+  shell: /home/{{ansible_user}}//make install

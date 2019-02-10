@@ -1,7 +1,9 @@
 ---
 - hosts:  all
-  gather_facts: False
+  gather_facts: no
   roles:
     - install.zabbix.sources
     - install.gcc
-    - install.cmake
+    - install.zabbix.server
+    #- install.zabbix.agent
+    #- install.zabbix.proxy

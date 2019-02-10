@@ -5,4 +5,11 @@
     name: "@Development tools"
     state: present
   become: yes
-
+- name: install all packages for compiling zabbix
+  yum:  name={{item}} state=present
+    with_items:
+      - readline-devel
+      - openssl-devel
+      - python-devel
+      - libxml2-devel
+      - net-snmp-devel
