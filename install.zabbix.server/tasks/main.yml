@@ -8,4 +8,4 @@
   shell: cd ~/zabbix-4.2.0alpha3 && make
 - name: install zabbix server
   become: yes
-  shell: /home/{{ansible_user}}//make install
+  shell: /home/{{ansible_user}}/zabbix-4.2.0alpha3/make install
