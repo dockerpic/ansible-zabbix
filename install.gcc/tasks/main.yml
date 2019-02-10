@@ -6,6 +6,7 @@
     state: present
   become: yes
 - name: install all packages for compiling zabbix
+  become: yes
   yum:  name={{item}} state=present
   with_items:
     - readline-devel
